@@ -9,12 +9,6 @@ Welcome to xtest-wiki's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-   home.rst
+
    src/home.rst
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
