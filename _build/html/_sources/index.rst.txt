@@ -10,7 +10,7 @@ Welcome to xtest-wiki's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   src/captcha-para.rst
+   src/home.rst
 
 Indices and tables
 ==================
