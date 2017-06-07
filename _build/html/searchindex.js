@@ -1,0 +1,1 @@
+Search.setIndex({docnames:["index","src/home"],envversion:51,filenames:["index.rst","src/home.rst"],objects:{},objnames:{},objtypes:{},terms:{"\u641c\u7d22\u9875\u9762":0,"\u6a21\u5757\u7d22\u5f15":0,"\u7d22\u5f15":0,hello:1,wiki:1,xtest:1},titles:["Welcome to xtest-wiki&#8217;s documentation!","&lt;no title&gt;"],titleterms:{document:0,indic:0,tabl:0,welcom:0,wiki:0,xtest:0}})
