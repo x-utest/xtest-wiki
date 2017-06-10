@@ -12,6 +12,7 @@
    :caption: 目录
 
    src/home.rst
+   src/communicate.rst
 
 索引表格
 ==================
