@@ -73,7 +73,7 @@ Xtest系统
 
 对测试记录生成 **分享链接** ，供其他非登录用户直接进行访问。
 
-`示例链接地址 http://xtest.apiapp.cc/pro-report-share.html?stoken=09d6065e49c011e7927a00163e006b26104f31e2`__
+`示例链接地址 <http://xtest.apiapp.cc/pro-report-share.html?stoken=09d6065e49c011e7927a00163e006b26104f31e2>`__
 
 
 
