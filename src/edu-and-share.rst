@@ -24,7 +24,7 @@ bug汇报或改进建议
 ==================
 
 
-`提交issues <http://git.oschina.net/x-utest/xtest-issues/issues>`
+`提交issues <http://git.oschina.net/x-utest/xtest-issues/issues>`__
 
 .. code::
 
