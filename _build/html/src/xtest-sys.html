@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>4. Xtest系统 &#8212; xtest-wiki 17.6.6.1 文档</title>
+    <title>1. Xtest系统 &#8212; xtest-wiki 17.6.6.1 文档</title>
     
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -27,8 +27,8 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="5. 客户端集成演示" href="client-demo.html" />
-    <link rel="prev" title="3. 基本理论和开发规范" href="basic-rule.html" />
+    <link rel="next" title="2. 新手快速使用" href="startup.html" />
+    <link rel="prev" title="欢迎查看“Xtest系统”帮助文档" href="../index.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -45,9 +45,35 @@
           <div class="body" role="main">
             
   <div class="section" id="xtest">
-<h1>4. Xtest系统<a class="headerlink" href="#xtest" title="永久链接至标题">¶</a></h1>
+<h1>1. Xtest系统<a class="headerlink" href="#xtest" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
-<h2>4.1. 系统演示<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>1.1. 系统简介<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p><cite>系统主页 &lt;http://xtest.apiapp.cc&gt;</cite>：</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">xtest</span><span class="o">.</span><span class="n">apiapp</span><span class="o">.</span><span class="n">cc</span>
+</pre></div>
+</div>
+<p>使用步骤：</p>
+<ol class="arabic simple">
+<li>微信扫码登录</li>
+<li>创建一个项目，查看详细配置信息</li>
+<li>下载sdk-demo</li>
+<li>填写自己的配置信息</li>
+<li>运行demo</li>
+<li>上传demo的测试结果</li>
+<li>分享可视化的报告</li>
+<li>查看项目成长图</li>
+</ol>
+<p>本系统主要的受众是： 自动化测试工程师，拥有编码能力的测试开发人员。</p>
+<p>如果你不会开发，只会点点点鼠标操作的，请绕道先回去补充基础知识再来尝试使用本系统。</p>
+<p>本系统主要解决如下几个问题：</p>
+<ol class="arabic simple">
+<li>测试报告的自动化生成及存储</li>
+<li>测试报告的信息流转</li>
+<li>以测试报告来量化整个项目周期</li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h2>1.2. 系统演示<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>形成稳定的产品测试线路图：</p>
 <img alt="../_images/xtest-list-share.png" src="../_images/xtest-list-share.png" />
 <p>对测试记录生成 <strong>分享链接</strong> ，供其他非登录用户直接进行访问：</p>
@@ -59,241 +85,9 @@
 <p>被分享和传播的精美测试报告：</p>
 <img alt="../_images/xtest-share-report.png" src="../_images/xtest-share-report.png" />
 <p>可以任意邮件或者QQ微信进行分享和传播，极大的提高了报告的 <strong>可读性和传播性</strong>。</p>
-<p>系统试用 <a class="reference external" href="http://xtest.apiapp.cc/login.html">地址</a> ：</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">xtest</span><span class="o">.</span><span class="n">apiapp</span><span class="o">.</span><span class="n">cc</span><span class="o">/</span><span class="n">login</span><span class="o">.</span><span class="n">html</span>
-</pre></div>
 </div>
-</div>
-<div class="section" id="id3">
-<h2>4.2. xtest系统接口<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>域名路径：</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">api</span><span class="o">.</span><span class="n">apiapp</span><span class="o">.</span><span class="n">cc</span><span class="o">/</span>
-</pre></div>
-</div>
-<p>这些系统接口可以直接封闭到sdk当中，目前提供了python版本的sdk的demo供大家参考。</p>
 <div class="section" id="id4">
-<h3>4.2.1. 认证接口<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
-<p>功能：生成token以授权接口的调用</p>
-<p>路径：</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">testdata</span><span class="o">/</span><span class="n">api</span><span class="o">-</span><span class="n">auth</span><span class="o">/</span>
-</pre></div>
-</div>
-<p>传入参数：</p>
-<ul class="simple">
-<li>app_id</li>
-<li>app_key</li>
-</ul>
-<p>请求方法：POST</p>
-<p>返回值：</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">&quot;msg&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-        <span class="s2">&quot;u_name&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-        <span class="s2">&quot;user_id&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-        <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;7c45fc98391311e78e1a00163e006b26&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;113.57.119.51&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;user_agent&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-        <span class="s2">&quot;rc_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-05-15 10:09:11&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;c_type&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-        <span class="s2">&quot;app_id&quot;</span><span class="p">:</span> <span class="s2">&quot;3832f354872411e6a7c700163e006b26&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;last_use_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-05-15 07:22:54&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;finger_prt&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-        <span class="s2">&quot;c_name&quot;</span><span class="p">:</span> <span class="s2">&quot;api&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;59190dc747fc890ec5ba42e0&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;is_del&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
-        <span class="s2">&quot;cookie&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-        <span class="s2">&quot;del_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-05-15 10:09:11&quot;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>其中最重要的是：</p>
-<ul class="simple">
-<li>token  后续进行接口调用的授权值</li>
-</ul>
-</div>
-<div class="section" id="id5">
-<h3>4.2.2. 数据接口<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
-<p>xtest系统提供了报告上行接口。</p>
-<p>接口路径:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">testdata</span><span class="o">/</span><span class="n">create</span><span class="o">-</span><span class="n">test</span><span class="o">-</span><span class="n">data</span><span class="o">/</span>
-</pre></div>
-</div>
-<p>token认证: 需要，token放url里面</p>
-<p>请求方式: POST</p>
-<p>请求参数:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;pro_id&quot;</span><span class="p">:</span> <span class="s2">&quot;57a835c8c6e905166da94243&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;pro_version&quot;</span><span class="p">:</span><span class="s2">&quot;1.3.4.5&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;run_time&quot;</span><span class="p">:</span> <span class="mf">51.77724599838257</span><span class="p">,</span>
-
-    <span class="s2">&quot;was_successful&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
-    <span class="s2">&quot;total&quot;</span><span class="p">:</span> <span class="mi">88</span><span class="p">,</span>
-    <span class="s2">&quot;skipped&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
-    <span class="s2">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="s2">&quot;failures&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-
-    <span class="s2">&quot;details&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;failures&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;AssertionError: 访问不合法,返回404&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;explain&quot;</span><span class="p">:</span> <span class="s2">&quot;只是用于测试的Demo,没有太多意义&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;test_case&quot;</span><span class="p">:</span> <span class="s2">&quot;test_nginx_config&quot;</span>
-        <span class="p">},</span>
-        <span class="p">{},</span>
-        <span class="p">{}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>以上的请求参数分为两部分：</p>
-<ol class="arabic simple">
-<li>单元测试框架标准结果部分</li>
-<li>自动化测试项目后期添加</li>
-</ol>
-<p>其中：</p>
-<ul class="simple">
-<li>pro_id 项目在xtest系统中的id代号</li>
-<li>pro_version 被测对象的唯一版本号</li>
-<li>run_time 运行所有脚本花费的时间</li>
-</ul>
-<p>属于自动化测试项目后期运算出来的数据，其它的则是标准的单元测试框架提供的测试结果中自带内容。</p>
-<p>上传数据成功后的返回值:</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;code&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span><span class="s2">&quot;msg&quot;</span><span class="p">:</span><span class="s2">&quot;success&quot;</span><span class="p">,</span><span class="s2">&quot;data&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id6">
-<h2>4.3. 提取测试结果<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
-<p>本小节以 pyunit 单元测试框架为例子，来对测试报告所需要的内容进行提取。</p>
-<div class="section" id="id7">
-<h3>4.3.1. 主要内容<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
-<p><cite>TextTestResult</cite> 结果中包含的如下内容：</p>
-<ul class="simple">
-<li>errors  错误详细信息列表</li>
-<li>failures  运行失败详细信息列表</li>
-<li>skipped 跳过的详细信息列表</li>
-<li>testsRun 运行的用例总数</li>
-</ul>
-<p>具体如下图所示：</p>
-<img alt="../_images/xtest-xunit-result.png" src="../_images/xtest-xunit-result.png" />
-</div>
-<div class="section" id="id8">
-<h3>4.3.2. 具体条目<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
-<p>以 <cite>failures</cite> 为例子：</p>
-<img alt="../_images/xtest-xunit-details.png" src="../_images/xtest-xunit-details.png" />
-<p>本测试用例的描述：</p>
-<p>编号 <strong>索引为0</strong> 的数据:</p>
-<ul class="simple">
-<li>_testMethodName  测试函数名称</li>
-<li>_testMethodDoc  测试函数的文档，这里面一般陈述本测试的功能</li>
-</ul>
-<p>打印出来的堆栈错误信息：</p>
-<ul class="simple">
-<li>编号  <strong>索引为1</strong> 的数据。</li>
-</ul>
-</div>
-<div class="section" id="id9">
-<h3>4.3.3. 提取方法<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
-<p>对测试结果进行内容提取，同时加入如下内容：</p>
-<ol class="arabic simple">
-<li>测试执行时间</li>
-<li>项目ID</li>
-<li>项目版本号</li>
-</ol>
-<p>进行标准化格式打包。</p>
-<p>代码：</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dict_encode_test_results</span><span class="p">(</span><span class="n">test_results</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    将测试结果进行json编码</span>
-<span class="sd">    :param test_results:</span>
-<span class="sd">    :type test_results:  unittest.TestResult</span>
-<span class="sd">    :return:</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">run_time</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;run_time&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-    <span class="n">pro_id</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pro_id&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-    <span class="n">pro_version</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;pro_version&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-
-    <span class="c1"># 主体部分</span>
-    <span class="n">res_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
-        <span class="c1"># was_successful=True if test_results.wasSuccessful() else False,</span>
-        <span class="n">was_successful</span><span class="o">=</span><span class="n">test_results</span><span class="o">.</span><span class="n">wasSuccessful</span><span class="p">(),</span>
-        <span class="n">total</span><span class="o">=</span><span class="n">test_results</span><span class="o">.</span><span class="n">testsRun</span><span class="p">,</span>
-        <span class="n">failures</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">test_results</span><span class="o">.</span><span class="n">failures</span><span class="p">),</span>
-        <span class="n">errors</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">test_results</span><span class="o">.</span><span class="n">errors</span><span class="p">),</span>
-        <span class="n">skipped</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">test_results</span><span class="o">.</span><span class="n">skipped</span><span class="p">),</span>
-        <span class="n">run_time</span><span class="o">=</span><span class="n">run_time</span><span class="p">,</span>
-        <span class="n">pro_id</span><span class="o">=</span><span class="n">pro_id</span><span class="p">,</span>
-        <span class="n">pro_version</span><span class="o">=</span><span class="n">pro_version</span>
-    <span class="p">)</span>
-
-    <span class="c1"># 详细信息部分</span>
-    <span class="n">failure_list</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 失败的内容</span>
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">test_results</span><span class="o">.</span><span class="n">failures</span><span class="p">:</span>
-        <span class="n">note_data</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;test_case&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_testMethodName</span><span class="p">,</span>
-            <span class="s1">&#39;explain&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_testMethodDoc</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">        :return:&#39;</span><span class="p">),</span>
-            <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;failures&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;note&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="p">}</span>
-
-        <span class="n">failure_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">note_data</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">test_results</span><span class="o">.</span><span class="n">errors</span><span class="p">:</span>
-        <span class="n">note_data</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;test_case&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_testMethodName</span><span class="p">,</span>
-            <span class="s1">&#39;explain&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_testMethodDoc</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">        :return:&#39;</span><span class="p">),</span>
-            <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;errors&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;note&#39;</span><span class="p">:</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="p">}</span>
-        <span class="n">failure_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">note_data</span><span class="p">)</span>
-
-    <span class="n">res_dict</span><span class="p">[</span><span class="s1">&#39;details&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">failure_list</span>
-
-    <span class="k">return</span> <span class="n">res_dict</span>
-</pre></div>
-</div>
-<p>可以提到一个如下的字典对象：</p>
-<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">test_res_dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;pro_version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.16.10.10.1&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;pro_id&quot;</span><span class="p">:</span> <span class="s2">&quot;57fa12ec47fc894ee04a2c69&quot;</span><span class="p">,</span>  <span class="c1"># 在后台管理系统中组织信息详细信息里面可以查看到:项目ID</span>
-    <span class="s2">&quot;run_time&quot;</span><span class="p">:</span> <span class="mf">51.772</span><span class="p">,</span>
-
-    <span class="s2">&quot;was_successful&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-    <span class="s2">&quot;skipped&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="s2">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s2">&quot;failures&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s2">&quot;total&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-
-    <span class="s2">&quot;details&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;failures&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;AssertionError: 访问不合法,返回404&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;explain&quot;</span><span class="p">:</span> <span class="s2">&quot;只是用于测试的Demo,没有太多意义&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;test_case&quot;</span><span class="p">:</span> <span class="s2">&quot;test_nginx_config&quot;</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id10">
-<h2>4.4. 对接xtest<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
-<p>主要步骤如下：</p>
-<ol class="arabic simple">
-<li>使用微信在首页扫码进行注册或者登录</li>
-<li>【资产管理】-【项目信息】查看到 <strong>项目编号</strong></li>
-<li>查看 <strong>app_id</strong> 和 <strong>app_key</strong></li>
-</ol>
-<p>依据xtest系统提供的API进行接口调用，可将  <strong>判定测试</strong> 的结果上传到 <strong>测试报告系统服务器</strong> 数据库，即可生成 <strong>软件系统量化线路图</strong> 和 <strong>精美测试报表服务</strong> 。</p>
-</div>
-<div class="section" id="id11">
-<h2>4.5. 定位和展望<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<h2>1.3. 定位和展望<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>系统定位：</p>
 <ol class="arabic simple">
 <li>本系统定位为 <strong>自动化</strong> 判定测试报告系统</li>
@@ -310,8 +104,8 @@
 <p>关于xtest系统，目前还有些功能在完善中，完善后再对外开放，相当于测试界人员的福利吧。换句话来说：</p>
 <p>目前本系统还不对外开放，我们公司自己先用好了再说 ^_^</p>
 </div>
-<div class="section" id="id12">
-<h2>4.6. 项目过程量化图<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id5">
+<h2>1.4. 项目过程量化图<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <img alt="../_images/xtest-project-cycle.png" src="../_images/xtest-project-cycle.png" />
 <p>主要特点：</p>
 <ol class="arabic simple">
@@ -320,6 +114,24 @@
 <li>随着功能的增加，总的用例数原则上是一直在增长的</li>
 <li>以用例成功率来衡量每个版本的发布节点</li>
 </ol>
+</div>
+<div class="section" id="id6">
+<h2>1.5. 后文提要<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>在正式开始系统的长篇大论前，有必要综述一下本文的内容。</p>
+<ol class="arabic simple">
+<li>展示了一种 <strong>测试量化开发</strong> 和 <strong>测试驱动开发</strong> 的工作流</li>
+<li>陈述了一些关于自动化测试的基本概念</li>
+<li>强调了一些必要的良好规范的开发习惯</li>
+<li>提出了一种自动化测试报告的报文格式</li>
+<li>给出了一种测试报告内容的提取的方法（以python下的测试框架pyunit为例子）</li>
+<li>介绍了一种pyunit和自动化报告平台的数据对接方法</li>
+</ol>
+<p>最终希望本文能够给测试开发从业人员一些启示，同时本文提到的系统能够让：</p>
+<ol class="arabic simple">
+<li>注重软件质量</li>
+<li>有条件做自动化测试</li>
+</ol>
+<p>的软件公司形成良好的开发过程，成就自己高效透明的开发信息流。</p>
 </div>
 </div>
 
@@ -331,22 +143,12 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">內容目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#">4. Xtest系统</a><ul>
-<li><a class="reference internal" href="#id1">4.1. 系统演示</a></li>
-<li><a class="reference internal" href="#id3">4.2. xtest系统接口</a><ul>
-<li><a class="reference internal" href="#id4">4.2.1. 认证接口</a></li>
-<li><a class="reference internal" href="#id5">4.2.2. 数据接口</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id6">4.3. 提取测试结果</a><ul>
-<li><a class="reference internal" href="#id7">4.3.1. 主要内容</a></li>
-<li><a class="reference internal" href="#id8">4.3.2. 具体条目</a></li>
-<li><a class="reference internal" href="#id9">4.3.3. 提取方法</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id10">4.4. 对接xtest</a></li>
-<li><a class="reference internal" href="#id11">4.5. 定位和展望</a></li>
-<li><a class="reference internal" href="#id12">4.6. 项目过程量化图</a></li>
+<li><a class="reference internal" href="#">1. Xtest系统</a><ul>
+<li><a class="reference internal" href="#id1">1.1. 系统简介</a></li>
+<li><a class="reference internal" href="#id2">1.2. 系统演示</a></li>
+<li><a class="reference internal" href="#id4">1.3. 定位和展望</a></li>
+<li><a class="reference internal" href="#id5">1.4. 项目过程量化图</a></li>
+<li><a class="reference internal" href="#id6">1.5. 后文提要</a></li>
 </ul>
 </li>
 </ul>
@@ -354,8 +156,8 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="basic-rule.html" title="上一章">3. 基本理论和开发规范</a></li>
-      <li>Next: <a href="client-demo.html" title="下一章">5. 客户端集成演示</a></li>
+      <li>Previous: <a href="../index.html" title="上一章">欢迎查看“Xtest系统”帮助文档</a></li>
+      <li>Next: <a href="startup.html" title="下一章">2. 新手快速使用</a></li>
   </ul></li>
 </ul>
 </div>

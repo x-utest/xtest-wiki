@@ -11,11 +11,11 @@
    :maxdepth: 2
    :caption: 目录
 
-
+   src/xtest-sys.rst
    src/startup.rst
+   src/xtest-test-api.rst
    src/workflow.rst
    src/basic-rule.rst
-   src/xtest-sys.rst
    src/client-demo.rst
    src/communicate.rst
 

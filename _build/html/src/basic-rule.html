@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>3. 基本理论和开发规范 &#8212; xtest-wiki 17.6.6.1 文档</title>
+    <title>5. 基本理论和开发规范 &#8212; xtest-wiki 17.6.6.1 文档</title>
     
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -27,8 +27,8 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="4. Xtest系统" href="xtest-sys.html" />
-    <link rel="prev" title="2. 有效工作流" href="workflow.html" />
+    <link rel="next" title="6. 客户端集成演示" href="client-demo.html" />
+    <link rel="prev" title="4. 有效工作流" href="workflow.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -45,9 +45,9 @@
           <div class="body" role="main">
             
   <div class="section" id="id1">
-<h1>3. 基本理论和开发规范<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1>5. 基本理论和开发规范<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id2">
-<h2>3.1. 概念陈述<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>5.1. 概念陈述<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>目前软件测试行业的理论和细分领域层出不穷，主要包括以下几方面：</p>
 <ol class="arabic simple">
 <li>判定测试</li>
@@ -83,7 +83,7 @@
 <p>都可以使用本系统生成报表并存储历史测试数据。</p>
 </div>
 <div class="section" id="id3">
-<h2>3.2. 开发规范<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>5.2. 开发规范<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>为了达到上述的预期效果，有一些基本的开发规范需要地团队共同遵守。</p>
 <ol class="arabic simple">
 <li>良好分层的软件系统架构</li>
@@ -91,12 +91,12 @@
 <li>形成良好信息流的基础软件功能</li>
 </ol>
 <div class="section" id="id4">
-<h3>3.2.1. 分层架构<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<h3>5.2.1. 分层架构<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>前面提到了 <strong>软件的分层金字塔</strong> 结构，是目前主流互联网公司的所推崇的基本结构。
 很多无法推进自动化测试的软件系统，大部分问题都出在这儿了，需要好好设计一下。</p>
 </div>
 <div class="section" id="id5">
-<h3>3.2.2. 版本管理<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<h3>5.2.2. 版本管理<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>所谓的版本管理，其实目标就是：明确被测对象。</p>
 <p>一个软件系统从开始到结束它的名字基本上是不会变的，但是每个时期，只要是任何代码的改变，其实它都是变化的。对外展现的是不变性，对内则一定要进行好的区分。</p>
 <p>被测对象版本号的重要性。每次提测而且需要记录备案的软件系统必须是独一无二的，拥有唯一的代号，即： <strong>版本号</strong>。</p>
@@ -107,7 +107,7 @@
 </ol>
 </div>
 <div class="section" id="id6">
-<h3>3.2.3. 基础功能<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<h3>5.2.3. 基础功能<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>形成流畅的信息流的前提是：所有的过程尽量能够自动化。</p>
 <p>对于测试人员来说，有两样东西非常重要：</p>
 <ol class="arabic simple">
@@ -167,12 +167,12 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">內容目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#">3. 基本理论和开发规范</a><ul>
-<li><a class="reference internal" href="#id2">3.1. 概念陈述</a></li>
-<li><a class="reference internal" href="#id3">3.2. 开发规范</a><ul>
-<li><a class="reference internal" href="#id4">3.2.1. 分层架构</a></li>
-<li><a class="reference internal" href="#id5">3.2.2. 版本管理</a></li>
-<li><a class="reference internal" href="#id6">3.2.3. 基础功能</a></li>
+<li><a class="reference internal" href="#">5. 基本理论和开发规范</a><ul>
+<li><a class="reference internal" href="#id2">5.1. 概念陈述</a></li>
+<li><a class="reference internal" href="#id3">5.2. 开发规范</a><ul>
+<li><a class="reference internal" href="#id4">5.2.1. 分层架构</a></li>
+<li><a class="reference internal" href="#id5">5.2.2. 版本管理</a></li>
+<li><a class="reference internal" href="#id6">5.2.3. 基础功能</a></li>
 </ul>
 </li>
 </ul>
@@ -182,8 +182,8 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="workflow.html" title="上一章">2. 有效工作流</a></li>
-      <li>Next: <a href="xtest-sys.html" title="下一章">4. Xtest系统</a></li>
+      <li>Previous: <a href="workflow.html" title="上一章">4. 有效工作流</a></li>
+      <li>Next: <a href="client-demo.html" title="下一章">6. 客户端集成演示</a></li>
   </ul></li>
 </ul>
 </div>
