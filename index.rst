@@ -17,5 +17,5 @@
    src/workflow.rst
    src/basic-rule.rst
    src/client-demo.rst
-   src/communicate.rst
+   edu-and-share.rst
 
