@@ -76,7 +76,6 @@ Xtest系统
 `示例链接地址 <http://xtest.apiapp.cc/pro-report-share.html?stoken=09d6065e49c011e7927a00163e006b26104f31e2>`__
 
 
-.. image:: ./images/xtest-project-cycle.png
 
 主要特点：
 
