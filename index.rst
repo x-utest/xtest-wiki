@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-欢迎查看”Xtest系统“帮助文档
+欢迎查看“Xtest系统”帮助文档
 ======================================
 
 .. toctree::
@@ -11,6 +11,8 @@
    :maxdepth: 2
    :caption: 目录
 
+
+   src/startup.rst
    src/home.rst
    src/communicate.rst
 
