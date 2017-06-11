@@ -58,7 +58,7 @@ doraemon
 
 一个基于Python的测试项目。
 
-`使用文本文件写自动化测试用例 <https://github.com/TesterlifeRaymond/doraemon>`：
+`使用文本文件写自动化测试用例 <https://github.com/TesterlifeRaymond/doraemon>`__：
 
 
 

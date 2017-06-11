@@ -7,7 +7,7 @@ Xtest系统
 系统简介
 ===============
 
-`系统主页 <http://xtest.apiapp.cc>`：
+`系统主页 <http://xtest.apiapp.cc>`__：
 
 .. code::
 
