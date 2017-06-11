@@ -39,7 +39,7 @@ Xtest系统
 
 
 
-系统演示
+可视化测试报告图
 ====================
 
 形成稳定的产品测试线路图：
@@ -53,9 +53,6 @@ Xtest系统
 
 `示例链接地址 <http://xtest.apiapp.cc/utest-report-share.html?stoken=b40a587c362a11e7856f00163e006b26>`_
 
-.. code::
-
-    http://xtest.apiapp.cc/utest-report-share.html?stoken=b40a587c362a11e7856f00163e006b26
 
 被分享和传播的精美测试报告：
 
@@ -63,6 +60,20 @@ Xtest系统
 
 可以任意邮件或者QQ微信进行分享和传播，极大的提高了报告的 **可读性和传播性**。
 
+
+可视化项目成长图
+====================
+
+
+在人多的测试报告数据进行累积后，可以形成清晰的产品线路图。
+
+效果图：
+
+.. image:: ./images/xtest-project-info.png
+
+对测试记录生成 **分享链接** ，供其他非登录用户直接进行访问。
+
+`示例链接地址 http://xtest.apiapp.cc/pro-report-share.html?stoken=09d6065e49c011e7927a00163e006b26104f31e2`__
 
 
 
