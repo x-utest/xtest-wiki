@@ -19,9 +19,3 @@
    src/client-demo.rst
    src/communicate.rst
 
-索引表格
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
