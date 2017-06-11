@@ -1,0 +1,227 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3. 基本理论和开发规范 &#8212; xtest-wiki 17.6.6.1 文档</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '17.6.6.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="4. Xtest系统" href="xtest-sys.html" />
+    <link rel="prev" title="2. 有效工作流" href="workflow.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>3. 基本理论和开发规范<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>3.1. 概念陈述<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>目前软件测试行业的理论和细分领域层出不穷，主要包括以下几方面：</p>
+<ol class="arabic simple">
+<li>判定测试</li>
+<li>压力测试</li>
+<li>响应测试</li>
+<li>安全测试</li>
+</ol>
+<p>本文只讲 <strong>判定测试</strong> 这个领域的内容。</p>
+<p>所谓的 <strong>判定测试</strong> 包括如下几类：</p>
+<ol class="arabic simple">
+<li>界面自动化</li>
+<li>接口自动化</li>
+<li>单元自动化</li>
+</ol>
+<p>其实这就是 <strong>分层自动化金字塔</strong> 中的三层。</p>
+<img alt="../_images/auto-test-by-layer.png" src="../_images/auto-test-by-layer.png" />
+<p>它们的共同点就是：对于一个定义数据和定义的执行过程通常会有一个预期输出，如果实际输出和预期输出不同，则定义为Flase，否则为True。</p>
+<p>所以，基于以上特点，都可以归结到 “判定测试” 的概念里面来，可以生成一样的 测试报告产出物，都适用于本文提到的 <strong>xtest系统</strong> 。</p>
+<p>此处的 <strong>判定测试</strong> 的测试场景和类别包括且不限于：</p>
+<ol class="arabic simple">
+<li>单元测试</li>
+<li>接口测试</li>
+<li>UI测试</li>
+<li>环境测试</li>
+</ol>
+<p>只要是涉及到：</p>
+<ol class="arabic simple">
+<li>测试用例</li>
+<li>测试套件</li>
+<li>测试结果</li>
+<li>测试详情</li>
+</ol>
+<p>都可以使用本系统生成报表并存储历史测试数据。</p>
+</div>
+<div class="section" id="id3">
+<h2>3.2. 良好的开发规范<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>为了达到上述的预期效果，有一些基本的开发规范需要地团队共同遵守。</p>
+<ol class="arabic simple">
+<li>良好分层的软件系统架构</li>
+<li>明确的版本管理体系</li>
+<li>形成良好信息流的基础软件功能</li>
+</ol>
+<div class="section" id="id4">
+<h3>3.2.1. 分层架构<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>前面提到了 <strong>软件的分层金字塔</strong> 结构，是目前主流互联网公司的所推崇的基本结构。
+很多无法推进自动化测试的软件系统，大部分问题都出在这儿了，需要好好设计一下。</p>
+</div>
+<div class="section" id="id5">
+<h3>3.2.2. 版本管理<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>所谓的版本管理，其实目标就是：明确被测对象。</p>
+<p>一个软件系统从开始到结束它的名字基本上是不会变的，但是每个时期，只要是任何代码的改变，其实它都是变化的。对外展现的是不变性，对内则一定要进行好的区分。</p>
+<p>被测对象版本号的重要性。每次提测而且需要记录备案的软件系统必须是独一无二的，拥有唯一的代号，即： <strong>版本号</strong>。</p>
+<p>关于版本号的命名方式，业界有很我成熟的方法，在此不再赘述。只要满足如下要求即可：</p>
+<ol class="arabic simple">
+<li>保证版本号的唯一性</li>
+<li>从字面意思可以看得到版本的演进和迭代顺序</li>
+</ol>
+</div>
+<div class="section" id="id6">
+<h3>3.2.3. 基础功能<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<p>形成流畅的信息流的前提是：所有的过程尽量能够自动化。</p>
+<p>对于测试人员来说，有两样东西非常重要：</p>
+<ol class="arabic simple">
+<li>被测对象版本号及特性信息</li>
+<li>运行相关环境及软件库依赖</li>
+</ol>
+<p>以 <strong>服务端接口</strong> 作为被测试对象的 <strong>自动化测试</strong> 过程为例子，开发人员必须至少提供一个接口：</p>
+<ul class="simple">
+<li>显示应用程序内部信息的接口。</li>
+</ul>
+<p>对于该接口的定义，下面给出一个示范：</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>接口名称</dt>
+<dd>/app-info/</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>请求方式</dt>
+<dd>GET</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>输入参数</dt>
+<dd>无</dd>
+</dl>
+</li>
+</ul>
+<p>返回值：</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s2">&quot;msg&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;server&quot;</span><span class="p">:</span> <span class="s2">&quot;tornado&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;req_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-04-19 15:38:46&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;app_version&quot;</span><span class="p">:</span> <span class="s2">&quot;3.17.04.18.1&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>参数说明：</p>
+<ul class="simple">
+<li>app_version 服务端接口应用程序版本号</li>
+<li>server 服务器类型</li>
+</ul>
+<p>如果有其它需要关注的信息，可以随时扩展上去。</p>
+<p>本文最关注的内容是 <strong>app_version 所表示的被测对象版本信息</strong> ，在上面的接口中有所体现。</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">內容目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">3. 基本理论和开发规范</a><ul>
+<li><a class="reference internal" href="#id2">3.1. 概念陈述</a></li>
+<li><a class="reference internal" href="#id3">3.2. 良好的开发规范</a><ul>
+<li><a class="reference internal" href="#id4">3.2.1. 分层架构</a></li>
+<li><a class="reference internal" href="#id5">3.2.2. 版本管理</a></li>
+<li><a class="reference internal" href="#id6">3.2.3. 基础功能</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="workflow.html" title="上一章">2. 有效工作流</a></li>
+      <li>Next: <a href="xtest-sys.html" title="下一章">4. Xtest系统</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/src/basic-rule.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>快速搜索</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="转向" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Harmo.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/src/basic-rule.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -13,7 +13,10 @@
 
 
    src/startup.rst
-   src/home.rst
+   src/workflow.rst
+   src/basic-rule.rst
+   src/xtest-sys.rst
+   src/client-demo.rst
    src/communicate.rst
 
 索引表格
