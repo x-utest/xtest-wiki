@@ -139,10 +139,10 @@ token认证: 需要，token放url里面
 - status 测试用例执行结果状态
     主要包含如下几种状态:
     
-    - errors  错误详细信息列表
-    - failures  运行失败详细信息列表
-    - skipped 跳过的详细信息列表
-    - testsRun 运行的用例总数
+    - errors  执行错误的用例
+    - failures  断言为失败的用例
+    - skipped 跳过的用例
+
 - explain   测试函数的整体备注解释文档
 - note  测试函数里面具体的assert断言的msg备注点
 
