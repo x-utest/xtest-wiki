@@ -123,6 +123,31 @@ token认证: 需要，token放url里面
 - pro_version 被测对象的唯一版本号
 - run_time 运行所有脚本花费的时间
 
+测试统计信息：
+
+- was_successful 整个过程是否成功
+- total 全部的测试用例总数
+- skipped 跳过的用例数
+- errors 执行出现代码错误的用例数
+- failures 用例判定为失败的用例数
+- details  有问题的用例的详细输出信息列表
+
+
+关于 **details** 里面的字段解释：
+
+- test_case 测试用例函数名称
+- status 测试用例执行结果状态
+    主要包含如下几种状态:
+    
+    - errors  错误详细信息列表
+    - failures  运行失败详细信息列表
+    - skipped 跳过的详细信息列表
+    - testsRun 运行的用例总数
+- explain   测试函数的整体备注解释文档
+- note  测试函数里面具体的assert断言的msg备注点
+
+
+
 属于自动化测试项目后期运算出来的数据，其它的则是标准的单元测试框架提供的测试结果中自带内容。
 
 
