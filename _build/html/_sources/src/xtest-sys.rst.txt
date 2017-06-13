@@ -51,7 +51,7 @@ Xtest系统
 .. image:: ./images/xtest-share-gen.png
 
 
-`示例链接地址 <http://xtest.apiapp.cc/utest-report-share.html?stoken=b40a587c362a11e7856f00163e006b26>`_
+`示例链接地址 <http://xtest.apiapp.cc/utest-report-share.html?stoken=38e96b8c502011e79a0900163e006b26fc42315e>`_
 
 
 被分享和传播的精美测试报告：
