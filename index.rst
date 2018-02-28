@@ -11,6 +11,8 @@
    :maxdepth: 2
    :caption: 目录
 
+
+   src/local_install.rst
    src/xtest-sys.rst
    src/startup.rst
    src/xtest-test-api.rst
