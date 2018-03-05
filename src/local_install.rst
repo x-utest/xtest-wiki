@@ -93,16 +93,17 @@ cnpm 可以替代npm使用，来安装包和依赖
 服务端
 ===============
 
-配置 MongoDB
->>>>>>>
+MongoDB 配置
+>>>>>>>>>>>
 
-修改端口为 27027，并开放局域网网络访问权限
+确认已安装好 MongoDB
 
 .. code::
 
- vi /etc/mongo.conf
+ mongo --version
+*MongoDB shell version: 3.0.1*
 
-修改配置为：
+编辑配置文件 /etc/mongo.conf, 修改端口为 27027，并开放局域网网络访问权限
 
 .. code::
 
@@ -111,68 +112,70 @@ cnpm 可以替代npm使用，来安装包和依赖
    port: 27027
    bindIp: 0.0.0.0
 
-添加 MongoDB 用户名密码
+重启 MongoDB 服务
 
 .. code::
 
  service mongod restart
+
+登录 MongoDB
+
+.. code::
+
  mongo --port 27027
- > use admin
- switched to db admin
- > db.createUser({
- ... user:"admin",
- ... pwd:"admin",
- ... roles:[{
- ... role:"userAdminAnyDatabase",
- ... db:"admin"
- ... }]
- ... })
- Successfully added user: {
-     "user" : "admin",
-     "roles" : [
-         {
-             "role" : "userAdminAnyDatabase",
-             "db" : "admin"
-         }
-     ]
- }
- > db.auth("admin", "admin")
- 1
- > use xtest
- switched to db admin
- > db.createUser({
- ... user:"xtest",
- ... pwd:"xtest@2017",
- ... roles:[{role:"readWrite", db:"xtest"}]
- ... })
- Successfully added user: {
-     "user" : "xtest",
-     "roles" : [
-         {
-             "role" : "readWrite",
-             "db" : "xtest"
-         }
-     ]
- }
- > db.auth("xtest", "xtest@2017")
+
+添加 admin 数据库的用户名密码
+
+.. code::
+
+ use admin
+
+ db.createUser({
+     user:"admin",
+     pwd:"admin",
+     roles:[{
+     role:"userAdminAnyDatabase",
+     db:"admin"
+     }]
+     })
+
+ db.auth("admin", "admin")
+
+添加 xtest 数据库的用户名密码
+
+.. code::
+
+ use xtest
+
+ db.createUser({
+     user:"xtest",
+     pwd:"xtest@2017",
+     roles:[{role:"readWrite", db:"xtest"}]
+     })
+
+ db.auth("xtest", "xtest@2017")
 
 代码准备
->>>>>>>
+>>>>>>>>>>>
+
+下载 x-test 服务端代码，版本 3.17.5.29.1
 
 .. code::
 
  git clone https://gitee.com/x-utest/xt-server-api.git
 
-
 安装依赖
->>>>>>>
+>>>>>>>>>>>
+
+使用 pip 安装部分开源库
 
 .. code::
 
  cd xt-server-api
+
  pip install -r requirement.txt
 
-安装 dtlib
+下载并安装 dtlib 库，版本 new
 
 .. code::
 
@@ -181,9 +184,9 @@ cnpm 可以替代npm使用，来安装包和依赖
  ./install.sh
 
 Nginx 安装配置
->>>>>>>
+>>>>>>>>>>>
 
-安装
+使用 apt 安装 nginx，版本 openresty/1.9.7.4
 
 .. code::
 
