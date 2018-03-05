@@ -6,9 +6,10 @@
 ============
 
 - Linux
-- Python 3.5
+- Python 3.5+
 - Git
-- MongoDB
+- MongoDB 3.0.1+
+- NodeJS 8.9.3+
 
 前端
 ===========
@@ -16,7 +17,7 @@
 代码准备
 >>>>>>>
 
-下载Nodejs，自行在http://nodejs.cn/ 下载最新版
+下载 Nodejs, 自行在 http://nodejs.cn/ 下载最新版
 可以在命令行测试是否安装成功，输入
 
 .. code::
@@ -29,7 +30,7 @@
 
  npm -v
 
-如果都显示版本号数字，则没有异常，已安装成功nodejs及包管理工具
+如果都显示版本号数字，则没有异常，已安装成功 nodejs 及包管理工具
 
 
 依赖安装
@@ -37,14 +38,14 @@
 
 首先安装网页打包工具webpack及vue等依赖项
 **在项目根目录下使用命令行输入**
-由于npm在国外服务器下载的原因，如果网络比较理想，可以直接输入
+由于 npm 在国外服务器下载的原因，如果网络比较理想，可以直接输入
 
 .. code::
 
   npm install 
 
 如果网络较差或者等待后卡住不动，可以直接使用淘宝镜像服务器
-安装npm的国内工具 cnpm，输入
+安装 npm 的国内工具 cnpm, 输入
 
 .. code::
 
@@ -56,7 +57,7 @@ cnpm 可以替代npm使用，来安装包和依赖
 
  cnpm -v
 
-如果显示目录和版本号，则cnpm安装成功
+如果显示目录和版本号，则 cnpm 安装成功
 
 .. code::
 
@@ -74,21 +75,21 @@ cnpm 可以替代npm使用，来安装包和依赖
 
  node init
 
-根据提示输入地址，改好后开始打包项目,命令行输入
+根据提示输入 IP 地址和端口号，改好后开始打包项目,命令行输入
 
 .. code::
 
  npm run build
 
 执行完成 会在根目录下生成 **/dist** 的静态资源文件夹， 放在Web服务器上
-本地也可以使用Nodejs开启Web服务进行测试，默认8896端口，输入
+本地也可以使用 Nodejs 开启 Web 服务进行测试，默认 8896 端口，输入
 
 .. code::
 
  npm run start
 
 
-本地可访问 http://localhost:8896 或者 ip加端口号
+本地可访问 http://localhost:8896 或者 http://IP:8896
 
 服务端
 ===============
@@ -96,7 +97,7 @@ cnpm 可以替代npm使用，来安装包和依赖
 MongoDB 配置
 >>>>>>>>>>>
 
-确认已安装好 MongoDB
+确认已安装好 MongoDB, 安装过程可参考 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 
 .. code::
 
@@ -197,7 +198,6 @@ Nginx 安装配置
 .. code::
 
  service nginx restart
-
 
 检查 8099, 8009 两个端口是否处于监听状态
 
