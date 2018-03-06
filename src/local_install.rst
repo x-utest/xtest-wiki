@@ -180,7 +180,7 @@ MongoDB 配置
 
 .. code::
 
- git clone https://gitee.com/our-dev/dtlib.git
+ git clone https://github.com/zhengwh/dtlib.git
  cd dtlib
  ./install.sh
 
