@@ -193,13 +193,15 @@ Nginx 安装配置
 
  apt-get install nginx
 
-复制 test-api.conf 和 test.conf 到 /etc/nginx/conf.d/ 目录下后，重启 nginx 服务
+复制 xt-server-api/nginx_config 目录中的 test-api.conf 和 test.conf 到 /etc/nginx/conf.d/ 目录下，并重启 nginx 服务使之生效
 
 .. code::
 
+ cp xt-server-api/nginx_config/* /etc/nginx/config.d/
+
  service nginx restart
 
-检查 8099, 8009 两个端口是否处于监听状态
+重启 nginx 服务后，检查 8099, 8009 两个端口是否处于监听状态
 
 .. code::
 
@@ -207,9 +209,7 @@ Nginx 安装配置
  tcp        0      0 0.0.0.0:8099            0.0.0.0:*               LISTEN      29871/nginx
  tcp        0      0 0.0.0.0:8009            0.0.0.0:*               LISTEN      29871/nginx
 
-*至此，整个 xtest 系统的安装配置已经完成，接下来登录页面即可*
-
-最后
+开始使用吧
 ===========
 
-浏览器打开 http://IP:8099 ，点击下一步即可初始化系统数据库，并获得一个管理员账号密码。
+浏览器打开 http://IP:8099 ，点击下一步即可初始化系统数据库，并获得一个管理员账号密码。使用该账号密码即可登录 X-Test 测试系统。
