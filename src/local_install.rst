@@ -150,11 +150,11 @@ MongoDB 配置
 
  db.createUser({
      user:"xtest",
-     pwd:"xtest@2017",
+     pwd:"xtest@2018",
      roles:[{role:"readWrite", db:"xtest"}]
      })
 
- db.auth("xtest", "xtest@2017")
+ db.auth("xtest", "xtest@2018")
 
 代码准备
 >>>>>>>>>>>
