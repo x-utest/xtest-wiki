@@ -75,7 +75,7 @@ cnpm 可以替代npm使用，来安装包和依赖
 
  node init
 
-根据提示输入 IP 地址和端口号，改好后开始打包项目,命令行输入
+根据提示输入服务器 IP 地址和 xtest 服务端口号（8009），改好后开始打包项目,命令行输入
 
 .. code::
 
@@ -104,13 +104,13 @@ MongoDB 配置
  mongo --version
 *MongoDB shell version: 3.0.1*
 
-编辑配置文件 /etc/mongo.conf, 修改端口为 27027，并开放局域网网络访问权限
+编辑配置文件 /etc/mongo.conf, 开放局域网网络访问权限
 
 .. code::
 
  # network interfaces
  net:
-   port: 27027
+   port: 27017
    bindIp: 0.0.0.0
 
 重启 MongoDB 服务
@@ -123,7 +123,7 @@ MongoDB 配置
 
 .. code::
 
- mongo --port 27027
+ mongo
 
 添加 admin 数据库的用户名密码
 
@@ -159,14 +159,28 @@ MongoDB 配置
 代码准备
 >>>>>>>>>>>
 
+下载 x-test 服务端代码基本包，版本 0.0.1
+
+.. code::
+
+ git clone https://github.com/x-utest/xtest-server-base.git
+
 下载 x-test 服务端代码，版本 3.17.5.29.1
 
 .. code::
 
- git clone https://gitee.com/x-utest/xt-server-api.git
+ git clone https://github.com/x-utest/xtest-server.git
 
 安装依赖
 >>>>>>>>>>>
+
+安装 x-test 服务端代码基本包
+
+.. code::
+
+ cd xt-server-base
+
+ sudo ./install
 
 使用 pip 安装部分开源库
 
@@ -193,11 +207,11 @@ Nginx 安装配置
 
  apt-get install nginx
 
-复制 xt-server-api/nginx_config 目录中的 test-api.conf 和 test.conf 到 /etc/nginx/conf.d/ 目录下，并重启 nginx 服务使之生效
+软链接 xt-server-api/nginx_config 目录中的配置文件到 /etc/nginx/conf.d/ 目录下，并重启 nginx 服务使之生效
 
 .. code::
 
- cp xt-server-api/nginx_config/* /etc/nginx/config.d/
+ ln -s xt-server-api/nginx_config/* /etc/nginx/config.d/
 
  service nginx restart
 
