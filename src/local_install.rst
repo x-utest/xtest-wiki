@@ -104,21 +104,6 @@ MongoDB 配置
  mongo --version
 *MongoDB shell version: 3.0.1*
 
-编辑配置文件 /etc/mongo.conf, 开放局域网网络访问权限
-
-.. code::
-
- # network interfaces
- net:
-   port: 27017
-   bindIp: 0.0.0.0
-
-重启 MongoDB 服务
-
-.. code::
-
- service mongod restart
-
 登录 MongoDB
 
 .. code::
@@ -194,7 +179,7 @@ MongoDB 配置
 
 .. code::
 
- git clone https://github.com/zhengwh/dtlib.git
+ git clone https://github.com/our-dev/dtlib.git
  cd dtlib
  ./install.sh
 
@@ -207,11 +192,11 @@ Nginx 安装配置
 
  apt-get install nginx
 
-软链接 xt-server-api/nginx_config 目录中的配置文件到 /etc/nginx/conf.d/ 目录下，并重启 nginx 服务使之生效
+复制 xt-server-api/nginx_config 目录中的配置文件到 /etc/nginx/conf.d/ 目录下，并重启 nginx 服务使之生效
 
 .. code::
 
- ln -s xt-server-api/nginx_config/* /etc/nginx/config.d/
+ cp xt-server-api/nginx_config/* /etc/nginx/config.d/
 
  service nginx restart
 
