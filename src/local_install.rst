@@ -5,10 +5,10 @@
 基本环境
 ============
 
-- Linux
+- Ubuntu 14.04
 - Python 3.5+
 - Git
-- MongoDB 3.0.1+
+- MongoDB 3.0.1
 - NodeJS 8.9.3+
 
 前端
@@ -98,6 +98,8 @@ MongoDB 配置
 >>>>>>>>>>>
 
 确认已安装好 MongoDB, 安装过程可参考 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+**注意：MongoDB 版本需要为 3.0，其他版本不支持。**
 
 .. code::
 
