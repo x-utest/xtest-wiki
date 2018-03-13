@@ -186,7 +186,7 @@ MongoDB 配置
 Nginx 安装配置
 >>>>>>>>>>>
 
-使用 apt 安装 nginx，版本 openresty/1.9.7.4
+使用 apt 安装 nginx（测试版本 openresty/1.9.7.4）
 
 .. code::
 
