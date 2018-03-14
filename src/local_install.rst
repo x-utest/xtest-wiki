@@ -5,10 +5,10 @@
 基本环境
 ============
 
-- Ubuntu 14.04
+- Ubuntu 14.04/16.04
 - Python 3.5+
 - Git
-- MongoDB 3.0.1
+- MongoDB 3.0.1-3.2.7
 - NodeJS 8.9.3+
 
 前端
@@ -99,7 +99,7 @@ MongoDB 配置
 
 确认已安装好 MongoDB, 安装过程可参考 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 
-**注意：MongoDB 版本需要为 3.0，其他版本不支持。**
+**注意：MongoDB 版本需要为 3.0.1 - 3.2.7，其他版本不支持。**
 
 .. code::
 
@@ -194,13 +194,17 @@ Nginx 安装配置
 
  apt-get install nginx
 
-复制 xt-server-api/nginx_config 目录中的配置文件到 /etc/nginx/conf.d/ 目录下，并重启 nginx 服务使之生效
+软链接 xt-server-api/nginx_config 目录中的配置文件到 /etc/nginx/conf.d/ 目录下，并重启 nginx 服务使之生效
 
 .. code::
 
- cp xt-server-api/nginx_config/* /etc/nginx/config.d/
+ cd /etc/nginx/conf.d/
+
+ ln -s <YOUR_BASE_PATH>/xt-server-api/nginx_config/* .
 
  service nginx restart
+
+其中 <YOUR_BASE_PATH> 为 xt-server-api 所在的目录。
 
 重启 nginx 服务后，检查 8099, 8009 两个端口是否处于监听状态
 
