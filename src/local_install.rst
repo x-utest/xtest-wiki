@@ -14,7 +14,7 @@
 前端
 ===========
 
-代码准备
+工具准备
 >>>>>>>
 
 下载 Nodejs, 自行在 http://nodejs.cn/ 下载最新版
@@ -32,6 +32,14 @@
 
 如果都显示版本号数字，则没有异常，已安装成功 nodejs 及包管理工具
 
+代码准备
+>>>>>>>
+
+下载 x-test 前端项目代码：
+
+.. code::
+
+ git clone https://github.com/x-utest/xtest-web.git
 
 依赖安装
 >>>>>>>
@@ -97,7 +105,7 @@ cnpm 可以替代npm使用，来安装包和依赖
 MongoDB 配置
 >>>>>>>>>>>
 
-确认已安装好 MongoDB, 安装过程可参考 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+确认已安装好 MongoDB, 安装过程可参考 http://blog.csdn.net/nxyx520/article/details/79564288
 
 **注意：MongoDB 版本需要为 3.0.1 - 3.2.7，其他版本不支持。**
 
