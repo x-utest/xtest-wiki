@@ -21,8 +21,11 @@
    src/client-demo.rst
    src/edu-and-share.rst
 
-xtest系统QQ讨论群：547955053，欢迎加入！
+讨论群：
+======================================
 
-扫描图片识别二维码加群：
+QQ群：**547955053**，欢迎搜索加入！
+
+或扫描二维码加群：
 
 .. image:: src/images/qq-group.jpg
