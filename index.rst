@@ -24,4 +24,5 @@
 xtest系统QQ讨论群：547955053，欢迎加入！
 
 长按图片识别二维码加群：
+
 .. image:: src/images/qq-group.jpg
