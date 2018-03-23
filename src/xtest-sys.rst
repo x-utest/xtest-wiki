@@ -7,11 +7,11 @@ Xtest系统
 系统简介
 ===============
 
-`系统主页 <http://xtest.apiapp.cc>`__：
+`系统主页 <http://gtestbce.gtapp.xyz>`__：
 
 .. code::
 
-    http://xtest.apiapp.cc
+    http://gtestbce.gtapp.xyz/
 
 使用步骤：
 
@@ -51,7 +51,7 @@ Xtest系统
 .. image:: ./images/xtest-share-gen.png
 
 
-`示例链接地址 <http://xtest.apiapp.cc/utest-report-share.html?stoken=38e96b8c502011e79a0900163e006b26fc42315e>`_
+`示例链接地址 <http://gtestbce.gtapp.xyz/utest-report-share.html?stoken=36000fd42e7d11e89c65fa163e5f7caa0f810403>`_
 
 
 被分享和传播的精美测试报告：
@@ -73,7 +73,7 @@ Xtest系统
 
 对测试记录生成 **分享链接** ，供其他非登录用户直接进行访问。
 
-`示例链接地址 <http://xtest.apiapp.cc/pro-report-share.html?stoken=09d6065e49c011e7927a00163e006b26104f31e2>`__
+`示例链接地址 <http://gtestbce.gtapp.xyz/pro-report-share.html?stoken=9999b2e2272b11e89c65fa163e5f7caa5ec19263>`__
 
 
 
