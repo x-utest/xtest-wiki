@@ -10,7 +10,7 @@
 
 
 
-本方提供了基于 Python的Pyunit的Demo程序，大家只需要登录xtest系统，修改配置信息即可运行使用。
+本方提供了基于 Python的Pyunit的Demo程序，大家只需要登录x-utest系统，修改配置信息即可运行使用。
 
 
 
@@ -25,7 +25,7 @@ Demo地址：
     https://git.oschina.net/x-utest/xtest-python-demo.git
 
 
-登录xtest系统，可以查找自己项目配置查找：
+登录x-utest系统，可以查找自己项目配置查找：
 
 
 点击项目的菜单：
@@ -100,5 +100,5 @@ Demo地址：
 的 success 表明上传报告服务器成功
 
 
-执行完毕后，即可在自己的 xtest系统 界面看到相应的报告，并进行分享
+执行完毕后，即可在自己的 x-utest系统 界面看到相应的报告，并进行分享
 
