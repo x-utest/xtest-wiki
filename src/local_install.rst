@@ -2,13 +2,15 @@
 局域网系统安装
 =================
 
-使用 Docker 部署（推荐）
+使用 docker-compose 部署（推荐）
 --------------------
 
 基本环境
 ========
 
-- 装有 Docker 环境的宿主机
+- Linux 宿主机
+- Docker 环境
+- docker-compose 工具
 
 构建镜像
 ==================
@@ -16,80 +18,43 @@
 代码准备
 >>>>>>>>>>
 
-下载 xtest Docker 项目源码
+下载 x-utest docker-compose 项目源码
 
 .. code::
 
- git clone https://github.com/x-utest/xtest-docker.git
-
-修改配置文件
->>>>>>>>>>
-
-修改 config.json 文件首行的 IP 为你宿主机的 IP；
-例如你的 Docker 宿主机 IP 为 192.168.1.200 ，则将
-
-.. code::
- var apiHost = 'http://192.168.3.158:8009/';
-
-修改为
-
-.. code::
- var apiHost = 'http://192.168.1.200:8009/';
-
-可以选择修改端口号为你期望的端口号，但是建议保持不动；
-
-**除非你有特殊要求, 保持其他文件不动, 否则你可能需要 xtest-server 和 Dockerfile 文件中的部分代码。**
-
-构建镜像
->>>>>>>>>>
-
-冒号后为版本号，不需要可以不写
-
-.. code::
-
- docker build -t xtest .
-
-构建过程需要耐心等待一段时间。
-
-配置
-===========
-
-在构建镜像步骤完成后，需要进行一些配置。
-
-创建卷
->>>>>>>>>>
-
-在宿主机上创建 docker 卷，用于 MongoDB 数据持久化
-
-.. code::
-
- docker volume create xtest-data
-
-初始化 MongoDB
->>>>>>>>>>>>>>>>
-
-xtest 系统需要创建用户，因此在上述步骤完成后，第一次运行 xtest 容器需要先进行初始化 MongoDB。执行如下命令：
-
-.. code::
-
- docker run -v xtest-data/data/db -it xtest ./init_mongo.sh
-
-完成初始化 MongoDB 后，容器会自动关闭，整个 xtest 系统的环境也已配置完成，可以运行使用啦！
+ git clone https://github.com/x-utest/xtest-docker-compose.git
 
 运行
 ============
 
+进入 docker-compose 项目根目录, 运行 cmd.sh
+
 .. code::
- docker run -p 8009:8009 -p 8099:8099 -v xtest-data/data/db -it xtest
+ ./cmd.sh
 
-该命令中，8099 端口为浏览器访问端口，若修改该端口，则步骤7也需要修改.例如你希望通过 HOST_IP:1234 访问 xtest 网页，则将本步骤中 -p 8099:8099 修改为 -p 1234:8099；
+初始化MongoDB
+>>>>>>>>>>>>>
 
-8009 端口用于 xtest 前后端通信，若你在步骤2中修改了该端口，则本步骤也需要做相应修改。例如你在步骤2中将端口修改为2345，则需要将本步骤中 -p 8009:8009 修改为 -p 2345:8009
+选择步骤1, 初始化 MongoDB.
+
+该步骤会自动创建一个数据卷, 并创建用于 x-utest 测试平台的管理用户.
+
+编译前端源码
+>>>>>>>>>>>>
+
+执行步骤2, 将接口IP修改为本宿主机的IP, 以便其他机器能够访问. **修改IP完成后,** 编译前端源码;
+
+运行 x-utest 服务
+>>>>>>>>>>>>>>>>>>
+
+**在执行完成步骤1, 步骤2后,** 执行步骤3即可启动 x-utest 测试平台.
 
 开始使用吧！
 ============
 
 浏览器输入 HOST_IP:8099，即可访问 xtest 系统，欢迎使用！
+
+默认用户名密码: admin/admin@2018, **请务必将第一次登录时的提示截图页面截图保存!**
 
 直接安装方式部署
 -----------------
