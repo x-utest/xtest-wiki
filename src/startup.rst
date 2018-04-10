@@ -37,7 +37,7 @@ Demo地址：
 
 .. image:: ./images/xtest-client-config-1.png
 
-在文件 **demo.py** 中替换掉原有的配置：
+在文件 **apps/xtest_cfg.py** 中替换掉原有的配置：
 
 .. code::
 
@@ -46,11 +46,13 @@ Demo地址：
     app_id = '3832f354872411e6a7c700163e006b26'
     app_key = '38342936872411e6a7c700163e006b26'
 
+在文件 **start.py** 中, 将 IP 修改为你的 IP
+
 然后运行程序(基于python3.5及以上) ：
 
 .. code::
 
-    python demo.py
+    python start.py
 
 运行结果如下：
 
