@@ -16,13 +16,13 @@ Pyunit
 
 .. code::
 
-    https://git.oschina.net/x-utest/xtest-python-demo.git
+    https://github.com/x-utest/xtest-python-demo.git
 
 下载方式：
 
 .. code::
 
-    git clone git@git.oschina.net:x-utest/xtest-python-demo.git
+    git clone https://github.com/x-utest/xtest-python-demo.git
 
 感谢：
 

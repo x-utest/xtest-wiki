@@ -24,11 +24,11 @@ bug汇报或改进建议
 ==================
 
 
-`提交issues <http://git.oschina.net/x-utest/xtest-issues/issues>`__
+`提交issues <https://github.com/x-utest/xtest-server/issues>`__
 
 .. code::
 
-    http://git.oschina.net/x-utest/xtest-issues/issues
+    https://github.com/x-utest/xtest-server/issues
 
 
 交流QQ群

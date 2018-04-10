@@ -22,7 +22,7 @@ Demo地址：
 
 .. code::
 
-    https://git.oschina.net/x-utest/xtest-python-demo.git
+    https://github.com/x-utest/xtest-python-demo.git
 
 
 登录x-utest系统，可以查找自己项目配置查找：
