@@ -42,15 +42,38 @@ Junit
 
 todo
 
-TestNg
+TestNG
 =============
 
+xtest-testng-sdk 项目主页：
 
-todo
+.. code::
+
+ https://github.com/x-utest/xtest-testng-sdk
+
+下载最新release的jar包并导入到你的测试项目中，依照项目主页Readme的步骤操作。
+
+Release：
+
+.. code::
+
+ https://github.com/x-utest/xtest-testng-sdk/releases
 
 感谢：
 
-- @再见理想
+- @严北
+
+client-java-testng-demo 项目主页：
+
+.. code::
+
+ https://github.com/x-utest/client-java-testng-demo
+
+依照项目主页Readme的步骤操作。
+
+感谢：
+
+- @凯哥
 
 doraemon
 =================
