@@ -216,12 +216,6 @@ MongoDB 配置
 代码准备
 >>>>>>>>>>>
 
-下载 x-utest 服务端代码基本包，版本 0.0.1
-
-.. code::
-
- git clone https://github.com/x-utest/xtest-server-base.git
-
 下载 x-utest 服务端代码，版本 3.17.5.29.1
 
 .. code::
