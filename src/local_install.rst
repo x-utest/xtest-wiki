@@ -265,7 +265,7 @@ Nginx 安装配置
 
  cd /etc/nginx/conf.d/
 
- ln -s <YOUR_BASE_PATH>/xt-server-api/nginx_config/* .
+ ln -s <YOUR_BASE_PATH>/xtest-server/nginx_config/* .
 
  service nginx restart
 
