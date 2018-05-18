@@ -92,7 +92,12 @@
 代码准备
 >>>>>>>
 
-下载 x-test 前端项目代码：
+在系统根目录下创建目录
+
+.. code-block::
+ cd / && mkdir /www && cd /www
+
+进入 /www 目录后，下载 x-test 前端项目代码：
 
 .. code::
 
@@ -164,7 +169,7 @@ MongoDB 配置
 
 确认已安装好 MongoDB, 安装过程可参考 http://blog.csdn.net/nxyx520/article/details/79564288
 
-**注意：MongoDB 版本需要为 3.4 - 3.6，其他版本不支持。**
+**注意：MongoDB 版本需要为 3.4 - 3.6，其他版本不支持。建议使用 3.6**
 
 .. code::
 
