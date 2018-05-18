@@ -164,12 +164,12 @@ MongoDB 配置
 
 确认已安装好 MongoDB, 安装过程可参考 http://blog.csdn.net/nxyx520/article/details/79564288
 
-**注意：MongoDB 版本需要为 3.0.1 - 3.2.7，其他版本不支持。**
+**注意：MongoDB 版本需要为 3.4 - 3.6，其他版本不支持。**
 
 .. code::
 
  mongo --version
-*MongoDB shell version: 3.0.1*
+*MongoDB shell version: 3.6.2*
 
 登录 MongoDB
 
@@ -246,7 +246,7 @@ MongoDB 配置
 
 .. code::
 
- git clone https://github.com/our-dev/dtlib.git
+ git clone https://github.com/ityoung/dtlib.git
  cd dtlib
  ./install.sh
 
