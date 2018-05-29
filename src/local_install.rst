@@ -65,7 +65,7 @@
 - Ubuntu 14.04/16.04
 - Python 3.5+
 - Git
-- MongoDB 3.0.1-3.2.7
+- MongoDB 3.4-3.6
 - NodeJS 8.9.3+
 
 前端
